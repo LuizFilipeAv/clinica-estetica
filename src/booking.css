@@ -1,1 +1,62 @@
-/* The appointment demonstration is styled alongside its component. */
+.booking { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(40px, 8vw, 128px); align-items: start; }
+.booking-intro > p { margin-top: 28px; color: var(--muted); font-size: 13px; }
+.booking-message { display: flex; gap: 16px; align-items: center; margin-top: 55px; }
+.booking-message p { font-size: 12px; line-height: 1.7; }
+.booking-leaf { width: 36px; height: 36px; }
+.booking-leaf svg { width: 100%; }
+.booking-intro > .demo-note { font-size: 10px; margin-top: 35px; line-height: 1.7; }
+.booking-panel { background: var(--cream); padding: 36px; min-width: 0; }
+.field-label, .booking-panel legend { font-size: 12px; font-weight: 500; }
+.select-wrap { position: relative; margin-top: 10px; }
+.select-wrap svg { position: absolute; right: 15px; top: 18px; pointer-events: none; }
+.select-wrap select { width: 100%; appearance: none; background: transparent; border: 1px solid #a1a68e; color: var(--deep); padding: 17px 38px 17px 15px; font-size: 12px; }
+.booking-panel fieldset { border: 0; padding: 0; margin: 27px 0 0; min-width: 0; }
+.booking-panel legend { padding: 0; }
+.date-navigation { display: flex; justify-content: space-between; align-items: center; margin: 10px 0 8px; }
+.date-navigation > span { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.date-navigation > div { display: flex; gap: 4px; }
+.date-navigation button { display: flex; align-items: center; justify-content: center; background: none; border: 0; width: 32px; height: 32px; }
+.date-navigation button:disabled { opacity: .3; }
+.date-options { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
+.date-option, .time-option { position: relative; cursor: pointer; }
+.date-option input, .time-option input { position: absolute; opacity: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+.date-option > span { border: 1px solid #b5b9a5; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 12px 4px; transition: background .2s, color .2s; }
+.date-option small { text-transform: uppercase; font-size: 9px; }
+.date-option strong { font-size: 23px; font-weight: 400; margin-block: 4px; font-variant-numeric: tabular-nums; }
+.date-option input:checked + span, .time-option input:checked + span { background: var(--deep); color: var(--cream); border-color: var(--deep); }
+.date-option input:focus-visible + span, .time-option input:focus-visible + span { outline: 2px solid var(--deep); outline-offset: 3px; }
+.date-option:hover > span, .time-option:hover > span { border-color: var(--deep); }
+.time-options { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; margin-top: 14px; }
+.time-option span { border: 1px solid #b5b9a5; padding: 11px 3px; display: block; text-align: center; font-size: 11px; font-variant-numeric: tabular-nums; }
+.time-fieldset:disabled .time-options { opacity: .45; }
+.time-fieldset:disabled .time-option, .time-fieldset:disabled input { cursor: not-allowed; }
+.booking-hint { color: var(--muted); font-size: 10px; margin: 13px 0 24px; line-height: 1.6; min-height: 16px; }
+.booking-error { color: #8c342b; font-size: 12px; margin-bottom: 15px; }
+.submit-booking { width: 100%; border: 1px solid var(--deep); background: var(--deep); color: var(--cream); padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; transition: background .2s, color .2s; }
+.submit-booking:hover:not(:disabled) { background: var(--olive); border-color: var(--olive); }
+.submit-booking:disabled { background: #dce0d1; color: #616750; border-color: #dce0d1; }
+.form-disclaimer { margin-top: 12px; font-size: 9px; text-align: center; color: var(--muted); }
+.booking-confirmation { animation: image-settle .5s var(--ease); }
+.confirmation-check { display: flex; align-items: center; justify-content: center; width: 57px; height: 57px; border: 1px solid var(--olive); border-radius: 50%; margin-bottom: 24px; }
+.booking-confirmation h3 { font-size: 32px; line-height: 1.15; letter-spacing: -.03em; margin-bottom: 16px; }
+.booking-confirmation h3 em { font-size: 1.2em; }
+.booking-confirmation > p { font-size: 12px; color: var(--muted); }
+.booking-confirmation dl { margin: 24px 0; }
+.booking-confirmation dl div { padding: 14px 0; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 5px; }
+.booking-confirmation dt { font-size: 10px; color: var(--muted); }
+.booking-confirmation dd { font-size: 13px; margin: 0; }
+.booking-confirmation .confirmation-note { font-size: 11px; }
+.reset-booking { background: none; border: 0; border-bottom: 1px solid currentColor; padding: 0 0 9px; margin-top: 25px; }
+@media (max-width: 1050px) { .booking { gap: 40px; } .booking-panel { padding: 26px; } }
+@media (max-width: 760px) {
+  .booking { grid-template-columns: 1fr; gap: 32px; }
+  .booking-intro > p { margin-top: 22px; }
+  .booking-message { display: none; }
+  .booking-intro > .demo-note { margin-top: 18px; }
+  .booking-panel { padding: 25px 20px; }
+  .select-wrap select { font-size: 11px; }
+  .date-options, .time-options { gap: 5px; }
+  .time-option span { font-size: 10px; padding-block: 12px; }
+  .date-option strong { font-size: 22px; }
+  .date-option small { font-size: 8px; }
+}
