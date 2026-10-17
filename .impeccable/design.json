@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-17T00:00:00Z",
+  "title": "Design System: Sálvia",
+  "extensions": {
+    "colorMeta": {
+      "olive": { "role": "primary", "displayName": "Oliva" },
+      "cream": { "role": "neutral", "displayName": "Creme" },
+      "deep": { "role": "neutral", "displayName": "Verde profundo" },
+      "muted": { "role": "neutral", "displayName": "Verde discreto" },
+      "line": { "role": "neutral", "displayName": "Linha" },
+      "sage": { "role": "neutral", "displayName": "Sálvia" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Título principal da abertura." },
+      "headline": { "displayName": "Headline", "purpose": "Títulos de seção." },
+      "body": { "displayName": "Corpo", "purpose": "Texto de leitura." },
+      "accent": { "displayName": "Acento serifado", "purpose": "Pausas expressivas e marca." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease", "value": "cubic-bezier(.16, 1, .3, 1)", "purpose": "Entrada editorial e transições de interface." }
+    ],
+    "breakpoints": [
+      { "name": "wide", "value": "1700px" },
+      { "name": "tablet", "value": "1050px" },
+      { "name": "mobile", "value": "760px" },
+      { "name": "small-mobile", "value": "390px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Ação principal",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ação preenchida para a simulação.",
+      "html": "<button class=\"ds-primary\">Simular agendamento <span aria-hidden=\"true\">→</span></button>",
+      "css": ".ds-primary{display:flex;justify-content:space-between;gap:32px;align-items:center;border:1px solid var(--deep,#343a2b);background:var(--deep,#343a2b);color:var(--cream,#f6f0e5);padding:18px 20px;font:12px 'Manrope Variable',sans-serif;transition:background .2s,color .2s}.ds-primary:hover{background:var(--olive,#687052);border-color:var(--olive,#687052)}.ds-primary:focus-visible{outline:2px solid currentColor;outline-offset:5px}"
+    },
+    {
+      "name": "Ação contornada",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Chamada de navegação sobre fundo oliva.",
+      "html": "<a class=\"ds-outline\" href=\"#agendar\">Agendar <span aria-hidden=\"true\">↗</span></a>",
+      "css": ".ds-outline{display:inline-flex;gap:32px;align-items:center;border:1px solid #f6f0e58a;padding:17px 24px;color:var(--cream,#f6f0e5);background:var(--olive,#687052);font:12px 'Manrope Variable',sans-serif;text-decoration:none;transition:background .2s,color .2s}.ds-outline:hover{background:var(--cream,#f6f0e5);color:var(--deep,#343a2b)}.ds-outline:focus-visible{outline:2px solid currentColor;outline-offset:5px}"
+    },
+    {
+      "name": "Campo de cuidado",
+      "kind": "input",
+      "description": "Seleção de um cuidado com contorno fino.",
+      "html": "<label class=\"ds-field\">Seu cuidado<select><option>Primeiro encontro</option><option>Cuidados faciais</option></select></label>",
+      "css": ".ds-field{display:grid;gap:10px;color:var(--deep,#343a2b);font:12px 'Manrope Variable',sans-serif}.ds-field select{width:100%;background:transparent;border:1px solid #a1a68e;border-radius:0;color:inherit;padding:17px 38px 17px 15px;font:inherit}.ds-field select:focus-visible{outline:2px solid currentColor;outline-offset:5px}"
+    },
+    {
+      "name": "Categoria",
+      "kind": "chip",
+      "description": "Seletor de categoria com linha para o estado ativo.",
+      "html": "<div class=\"ds-categories\"><button aria-pressed=\"true\">Facial</button><button aria-pressed=\"false\">Corporal</button></div>",
+      "css": ".ds-categories{display:flex;gap:44px;border-bottom:1px solid #a6ad98}.ds-categories button{background:none;border:0;border-bottom:2px solid transparent;padding:18px 0;margin-bottom:-1px;color:var(--muted,#636952);font:12px 'Manrope Variable',sans-serif}.ds-categories button[aria-pressed=true]{border-color:var(--deep,#343a2b);color:var(--deep,#343a2b)}.ds-categories button:hover{color:var(--deep,#343a2b)}.ds-categories button:focus-visible{outline:2px solid currentColor;outline-offset:5px}"
+    },
+    {
+      "name": "Tratamento expansível",
+      "kind": "custom",
+      "description": "Lista editorial de cuidados com divisória e detalhe.",
+      "html": "<details class=\"ds-treatment\"><summary>Limpeza de pele <span aria-hidden=\"true\">+</span></summary><p>Um cuidado para trazer leveza à sua rotina.</p></details>",
+      "css": ".ds-treatment{border-bottom:1px solid #bdc2b1;color:var(--deep,#343a2b);font-family:'Manrope Variable',sans-serif}.ds-treatment summary{display:flex;justify-content:space-between;gap:16px;padding:25px 0;cursor:pointer;font-size:24px;letter-spacing:-.03em;list-style:none}.ds-treatment p{color:var(--muted,#636952);font-size:13px;line-height:1.85;padding:0 36px 30px 0}.ds-treatment summary:focus-visible{outline:2px solid currentColor;outline-offset:5px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Beleza sem pressa",
+    "overview": "Uma linguagem editorial serena combina campos amplos de cor, fotografia e tipografia generosa. A identidade é própria e em português, em um projeto fictício de portfólio.",
+    "keyCharacteristics": ["Campos em oliva e creme", "Tipografia leve com acentos serifados", "Fotografia ampla e linhas finas"],
+    "rules": [],
+    "dos": ["Manter foco visível e preferência por movimento reduzido.", "Informar que o agendamento é uma simulação.", "Documentar a origem das imagens ilustrativas."],
+    "donts": ["Apresentar elementos fictícios como prova de uma clínica real.", "Copiar as fotografias da referência."]
+  }
+}
