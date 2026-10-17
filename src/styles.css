@@ -4,7 +4,7 @@
   font-family: 'Manrope Variable', sans-serif;
   color: #343a2b; background: #f6f0e5; font-synthesis: none;
   text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased;
-  --cream: #f6f0e5; --olive: #737a5d; --deep: #343a2b; --muted: #636952;
+  --cream: #f6f0e5; --olive: #687052; --deep: #343a2b; --muted: #636952;
   --line: #d3d3c3; --sage: #e1e4d8;
   --serif: 'Cormorant Garamond Variable', Georgia, serif;
   --gutter: clamp(24px, 5vw, 88px); --ease: cubic-bezier(.16, 1, .3, 1); --hero-drift: 0px;
@@ -50,7 +50,7 @@ svg { flex-shrink: 0; }
 .hero { position: relative; height: min(720px, 62vw); min-height: 580px; color: var(--cream); overflow: hidden; isolation: isolate; }
 .hero h1 { position: absolute; z-index: 1; top: 42px; left: var(--gutter); right: var(--gutter); text-align: center; line-height: .98; letter-spacing: -.04em; font-size: clamp(100px, 12.6vw, 190px); font-weight: 300; }
 .hero h1 span { display: block; animation: title-arrive 1.4s var(--ease) both; }
-.hero h1 em { display: block; text-align: right; font-size: .9em; padding-right: 1%; animation: title-arrive 1.7s var(--ease) both; }
+.hero h1 em { display: block; position: absolute; right: 0; top: 1.45em; width: 29%; text-align: left; font-size: .62em; line-height: .95; animation: title-arrive 1.7s var(--ease) both; }
 .hero-portrait { position: absolute; z-index: 2; height: 82%; width: 52%; left: 23%; bottom: -2px; transform: translateY(var(--hero-drift)); pointer-events: none; }
 .hero-portrait img { width: 100%; height: 100%; object-fit: contain; object-position: bottom; animation: portrait-arrive 1.8s var(--ease) both; }
 .hero-caption { position: absolute; z-index: 3; bottom: 69px; left: var(--gutter); }
@@ -162,7 +162,8 @@ svg { flex-shrink: 0; }
   .navigation .nav-book { padding: 16px; margin-top: 10px; justify-content: space-between; }
   .hero { height: 650px; min-height: 0; }
   .hero h1 { top: 32px; left: 16px; right: 16px; font-size: clamp(54px, 13.4vw, 100px); line-height: 1; }
-  .hero h1 em { padding-right: 0; text-align: center; font-size: 1.02em; }
+  .hero h1 em { position: static; width: auto; text-align: center; font-size: 1.02em; line-height: 1; }
+  .hero h1 em br { display: none; }
   .hero-portrait { width: 100%; left: 0; height: 74%; }
   .hero-caption { left: 24px; bottom: 28px; background: var(--olive); padding: 15px 18px 17px; }
   .hero-caption .tiny-flower, .hero-caption p { display: none; }
@@ -208,6 +209,12 @@ svg { flex-shrink: 0; }
   .footer-bottom { flex-direction: column; align-items: flex-start; gap: 14px; line-height: 1.6; }
 }
 @media (max-width: 390px) { .hero { height: 570px; } .hero-portrait { height: 76%; } .hero-bottom { font-size: 8px; } .hero-caption { left: 16px; padding-inline: 12px; } .hero-circle { right: 16px; } }
+
+@media (max-width: 767px) {
+  .hero-caption a, .hero-bottom, .hero-circle, .category-picker button,
+  .duration, .treatment-detail .text-link, .space-disclaimer, .space-image figcaption,
+  .footer-bottom { font-size: 12px; }
+}
 @media (prefers-reduced-motion: reduce) {
   :root { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }

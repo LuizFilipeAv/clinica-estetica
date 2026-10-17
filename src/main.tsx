@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import '@fontsource-variable/manrope';
-import '@fontsource-variable/cormorant-garamond';
-import '@fontsource-variable/cormorant-garamond/wght-italic.css';
+import './fonts.css';
 import App from './App';
 import './styles.css';
 

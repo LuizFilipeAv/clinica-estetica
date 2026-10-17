@@ -60,3 +60,10 @@
   .date-option strong { font-size: 22px; }
   .date-option small { font-size: 8px; }
 }
+
+@media (max-width: 767px) {
+  .booking-intro > .demo-note, .date-navigation > span, .date-option small,
+  .time-option span, .booking-hint, .form-disclaimer, .booking-confirmation dt,
+  .booking-confirmation .confirmation-note { font-size: 12px; }
+  .select-wrap select { font-size: 16px; }
+}

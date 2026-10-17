@@ -17,7 +17,7 @@ export function Treatments({ onChoose }: { onChoose: (id: string) => void }) {
     </div>
     <div className="treatment-layout">
       <div className="treatment-image" data-reveal>
-        <img key={category} src={category === 'corporal' ? '/images/espaco.png' : '/images/facial.png'} alt={category === 'corporal' ? 'Ambiente ilustrativo com maca e iluminação natural' : 'Fotografia ilustrativa de uma massagem facial delicada'} width="1536" height="1024" loading="lazy" />
+        <img key={category} src={category === 'corporal' ? '/images/espaco.webp' : '/images/facial.webp'} srcSet={category === 'corporal' ? '/images/espaco-small.webp 720w, /images/espaco.webp 1440w' : '/images/facial-small.webp 720w, /images/facial.webp 1440w'} sizes="(max-width: 760px) 100vw, 50vw" alt={category === 'corporal' ? 'Ambiente ilustrativo com maca e iluminação natural' : 'Fotografia ilustrativa de uma massagem facial delicada'} width="1536" height="1024" loading="lazy" />
         <span className="image-note">Cuidar é um gesto de presença.</span>
       </div>
       <div className="treatment-list">
@@ -34,3 +34,4 @@ export function Treatments({ onChoose }: { onChoose: (id: string) => void }) {
     </div>
   </section>;
 }
+
