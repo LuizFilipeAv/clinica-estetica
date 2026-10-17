@@ -1,0 +1,18 @@
+{
+  "tool": "OpenAI built-in image_gen",
+  "note": "All images were generated for this fictional portfolio project. They do not depict a real clinic or its patients. Originals are in assets/originals, production WebP files in public/images.",
+  "images": [
+    {
+      "name": "retrato",
+      "prompt": "Create a premium editorial beauty photograph for a fictional Brazilian aesthetic clinic called Sálvia. Asset only, no words, no logo. A naturally beautiful adult Brazilian woman around 32 with warm medium olive skin, dark brown hair smoothly swept back, subtle natural freckles and visible real skin texture, warm brown eyes, gentle confident relaxed expression, looking toward camera, head turned slightly to her right, one hand lightly touching neck below chin. Bust portrait from top of head to mid chest, wearing a simple strapless cream linen top, shoulders completely visible with generous breathing room on each side, image cut straight at lower chest. Soft warm daylight from upper left, finely detailed skin, understated luxury beauty magazine art direction, genuine human asymmetry, no airbrushed plastic finish. Portrait composition 4:5. The subject must be entirely isolated on a transparent background, preserve soft fine hair edges and natural shoulders, no backdrop, no floating props, no text."
+    },
+    {
+      "name": "espaco",
+      "prompt": "Photorealistic architectural editorial photograph for the fictional Sálvia aesthetic clinic in Brazil. A tranquil contemporary treatment room, warm off-white limewash walls, light travertine floor, one elegant beige treatment bed with folded linen towels, sculptural olive-wood stool, tall sheer ivory curtains with soft morning sunlight from left, a real olive tree in an earthy stone pot. Simple rounded door opening at back, a small wall shelf with unbranded amber bottles. Warm muted cream and olive hues, human and tactile, quiet editorial luxury, realistic natural materials, high-end interior magazine photography at eye level with straight verticals. Wide landscape 3:2. No people, no writing, no logos, no watermark."
+    },
+    {
+      "name": "facial",
+      "prompt": "Create a photorealistic premium skincare editorial photograph for a fictional aesthetic clinic website. A close-up side view of an adult woman around 35 with warm olive skin and eyes gently closed, relaxing while a professional's clean hands give a gentle facial massage along her cheek and jaw. Only the client's face and the therapist's two anatomically correct hands visible. The woman reclines on soft natural ivory linen, head wrapped in cream towel. Natural luminous skin with authentic pores, no heavy makeup, no excessive shine. Soft window daylight, muted warm beige and sage editorial grading, soothing calm composition, film-like photography without added grain. Horizontal 3:2 frame; face angled diagonally, carefully composed and intimate, shallow depth of field. No text, no watermark, no logo, no medical equipment, no needles."
+    }
+  ]
+}
